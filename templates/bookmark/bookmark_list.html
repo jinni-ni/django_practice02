@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bookmark List</title>
-</head>
-<body>
-<h1>Bookmark List</h1>
+{% extends "base.html" %}
 
-<ul>
-    {% for bookmark in object_list %}
-        <li><a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a></li>
-    {% endfor %}
-</ul>
+{% block title %}bookmark_list.html{% endblock %}
+{% block content %}
 
-</body>
-</html>
+
+    <h1>Bookmark List</h1>
+    <ul>
+        {% for bookmark in object_list %}
+        <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

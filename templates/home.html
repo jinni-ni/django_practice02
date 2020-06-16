@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}home.html{% endblock %}
+
+{% block extra-style %}
+<style type="text/css">
+.home-image {
+    background-image: url("{% static 'img/blue.png' %}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    height: 500px;
+    border-top: 10px  white;
+    border-bottom:10px  white;
+    padding: 20px 0 0 20px;
+}
+.title{
+    color: darkblue;
+    font-weight: bold;
+}
+
+.powered {
+    position: relative;
+    top: 77%;
+    color: black;
+    font-style: italic;
+}
+</style>
+{% endblock %}
+{% block content %}
+
+    <div class="home-image">
+        <h2 class="title"> Blue-collar WebPage</h2>
+        <h4 class="powered"><i class="fas fa-arrow-circle-right">powered by django and bootstrap.</i></h4>
+    </div>
+    <hr style="margin: 10px 10px;">
+
+    <div class="row text-center">
+        <div class="col-sm-5">
+            <h3>Bookmark App</h3>
+            <p>Bookmark is a Uniform Sesource Identifier (URI)
+                That is stored for later retrieval in any of various storage formats.
+                You can store your own bookmarks by Bookmark application.
+                It's also possible to update or delete your bookmarks.</p>
+        </div>
+        <div class="col-sm-5">
+            <h3>Blgo App</h3>
+            <p>This application makes it possible to log daily events or write your own interest
+            such as hobbies, techniquees, etc.
+            A typical blog combines text, digital images, and links to other blogs, web pages,
+                and other media related to its topic.</p>
+        </div>
+    <br/>
+    <br/>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer class="bg-success">
+        <div class="text-white font-italic text-right mr-5">Copyright &copy; 2020 Django by jinni.ni</div>
+    </footer>
+{% endblock %}

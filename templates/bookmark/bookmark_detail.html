@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>bookmark detail.html</title>
-</head>
-<body>
-<h1>{{ object.title }}</h1>
 
-<ul><a href="{{ object.url }}">{{ object.url }}</a></ul>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}bookmark_detail.html{% endblock %}
+
+{% block content %}
+    <h1>{{ object.title }}</h1>
+    <ul>
+        <li>URL : <a href="{{ object.url }}">{{ object.url }}</a></li>
+    </ul>
+{% endblock %}
