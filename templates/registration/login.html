@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+    <h1>Please Login</h1>
+    {% if form.erros %}
+        <div class="alert alert-danger">
+            <div clas="font-weight-bold">오류 확인 {{ forms.error }}</div>
+        </div>
+    {% endif %}
+
+    <form action="." method="post" class="card pt-3">{% csrf_token %}
+        <div class="form-group row">
+            {{ form.username|add_label_class:"col-form-label col-sm-2 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.username|add_class:"form-control"|attr:"autofocus" }}
+            </div>
+        </div>
+        <div class="form-group row">
+            {{ form.email|add_label_class:"col-form-label col-sm-2 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.email|add_class:"form-control"|attr:"autofocus" }}
+            </div>
+        </div>
+        <div class="form-group row">
+            {{ form.password|add_label_class:"col-form-label col-sm-2 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.password|add_class:"form-control"|attr:"autofocus" }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="offset-sm-2 col-sm-5">
+                <input type="submit" value="로그인" class="btn btn-info" />
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </div>
+    </form>
+{% endblock %}

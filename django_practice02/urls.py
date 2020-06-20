@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from django_practice02.views import HomeView
+from django_practice02.views import UserCreateView, UserCreateDoneTV
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,9 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('bookmark/', include('bookmark.urls')),
     path('blog/', include('blog.urls')),
+
+    #Login
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/register', UserCreateView.as_view(), name='register'),
+#    path('accounts/register/done', UserCreateDoneTV.as_veiw(), name='register_done'),
 ]
