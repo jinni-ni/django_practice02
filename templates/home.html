@@ -25,39 +25,198 @@
     color: black;
     font-style: italic;
 }
+/* margin.css */
+
+        .mtb-0{
+          margin-top: 0px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+        }
+        .mb-3, .my-3 {
+          margin-bottom: 16px!important;
+        }
+
+        .my-3{
+          margin-top: 16px!important;
+        }
+
+        .mx-auto {
+          margin-right: auto!important;
+          margin-left: auto!important;
+        }
+        /* margin.css end*/
+
+        /* grid.css */
+        .gutter-md-spacious>[class*=col-]{
+          padding-right: 24px!important;
+          padding-left: 24px!important;
+        }
+        /* grid.css end */
+
+         .py-sm-8{
+            padding-top : 64px!important;
+            padding-bottom : 64px!important;
+        }
+
+        .background{
+            /*background-color: 	#008080;*/
+            background-color: #ededed;
+            background-position: center 10%;
+            background-size:conver;
+        }
+
+        .p-responsive{
+            padding-right: 16px!important;
+            padding-left: 16px!important;
+        }
+
+        .position-relative {
+            position: relative!important;
+        }
+
+        .container-lg, .container-xl {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container-lg{
+            max-width:1012px;
+        }
+
+        .d-md-flex {
+           display: flex!important;
+        }
+
+        .flex-items-center {
+           align-items: center!important;
+        }
+
+        .gutter-md-spacious {
+            margin-right: -24px;
+            margin-left: -24px;
+        }
+        /*font.css */
+        .h5 {
+          font-size: 14px!important;
+          font-weight: 600!important;
+        }
+
+        .h1{
+          font-size: 80px!important;
+        }
+        .h2{
+          font-size: 60px!important;
+        }
+        .maincolor{
+          color:#1d77ff
+          /*color: #00c3ff*/
+        }
+        /*font.css end */
+        label {
+          cursor: default;
+        }
+
+        .bg-gray-light{
+          background-color: white;
+        }
+
+        .rounded-1{
+          border-radius: 5px!important;
+        }
+
+        /* button.css */
+        .btn-mktg{
+          display: inline-block;
+          padding: 16px 24px;
+          font-size: 14px;
+          font-weight: 500;
+          color: #fff;
+          white-space: nowrap;
+          vertical-align: middle;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          background-color: #1074e7;
+          border: 1px solid #1074e7;
+          border-radius: 3px;
+          transition: .2s;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+
+        .btn-primary-mktg {
+          /*background-color: #2ebc4f;
+          border-color: #2ebc4f;*/
+          background-color: #1d77ff;
+          border-color: #1d77ff;
+        }
+
+        .btn-large-mktg {
+          padding: 20px 32px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        /* button.css end */
+        /* form-group.css */
+
+        .form-group.required .form-group-header label::after, .form-group.required dt label::after {
+            padding-left: 5px;
+            color: #cb2431;
+            content: "*";
+        }
+        /* form-group.css end */
 </style>
 {% endblock %}
 {% block content %}
-
-    <div class="home-image">
-        <h2 class="title"> Blue-collar WebPage</h2>
-        <h4 class="powered"><i class="fas fa-arrow-circle-right">powered by django and bootstrap.</i></h4>
-    </div>
-    <hr style="margin: 10px 10px;">
-
-    <div class="row text-center">
-        <div class="col-sm-5">
-            <h3>Bookmark App</h3>
-            <p>Bookmark is a Uniform Sesource Identifier (URI)
-                That is stored for later retrieval in any of various storage formats.
-                You can store your own bookmarks by Bookmark application.
-                It's also possible to update or delete your bookmarks.</p>
+<header class="py-5 mb-5 background">
+  <div class="container h-100 py-sm-8">
+    <div class="row h-100 align-items-center">
+      <div class="col-md-7 text-md-left">
+        <h1 class ="h1 maincolor font-weight-bold mtb-0">Blue collar</h1>
+        <h1 class ="h2 maincolor font-weight-bold mtb-0">Portfolio</h3>
+         <p>[1]테스트 문구 테스트 문구 테스트 문구 테스트 문구 테스트 문구<br/>
+             [2]테스트 문구 테스트 문구 테스트 문구 테스트 문구
+         </p>
+      </div>
+      <div class="mx-auto col-sm-8 col-md-5 hide-sm py-3 ">
+        <div class="rounded-1 bg-gray-light text-gray py-4 px-4 px-md-3 px-lg-4">
+          <form class="text-gray-dark" autocomplete="off" method="post">
+            <!--username-->
+            <dl class="form-group mt-0 required">
+              <dt class="input-label">
+                <label class="form-label h5" for="user">Username</label>
+              </dt>
+              <dd>
+                <input type="text" name="user[login]" id="user[login]" class="form-control form-control-lg input-block" autocomplete="off" spellcheck="false">
+              </dd>
+            </dl>
+            <dl class="form-group mt-0 required">
+              <dt class="input-label">
+                <label class="form-label h5" for="Email">Email</label>
+              </dt>
+              <dd>
+                <input type="text" name="Email" id="Email" class="form-control form-control-lg input-block" autocomplete="off" spellcheck="false">
+              </dd>
+            </dl>
+            <dl class="form-group mt-0 required">
+              <dt class="input-label">
+                <label class="form-label h5" for="Password">Password</label>
+              </dt>
+              <dd>
+                <input type="password" name="Password" id="Password" class="form-control form-control-lg input-block" autocomplete="off" spellcheck="false">
+              </dd>
+            </dl>
+            <br/>
+            <br/>
+            <button type="submit" class="btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block my-3">Blue Collar 회원가입</button>
+            <br/>
+          </form>
         </div>
-        <div class="col-sm-5">
-            <h3>Blgo App</h3>
-            <p>This application makes it possible to log daily events or write your own interest
-            such as hobbies, techniquees, etc.
-            A typical blog combines text, digital images, and links to other blogs, web pages,
-                and other media related to its topic.</p>
-        </div>
-    <br/>
-    <br/>
-    
+      </div>
     </div>
-{% endblock %}
+  </div>
+</header>
 
-{% block footer %}
-    <footer class="bg-success">
-        <div class="text-white font-italic text-right mr-5">Copyright &copy; 2020 Django by jinni.ni</div>
-    </footer>
 {% endblock %}
