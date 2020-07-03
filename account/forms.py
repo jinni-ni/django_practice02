@@ -1,6 +1,5 @@
 from django import forms
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
-
 from .models import MyUser
 
 class UserCreationForm(forms.ModelForm):
