@@ -26,4 +26,3 @@ class Post(models.Model):
 
     def get_next(self):
         return self.get_next_by_modify_dt()
-
