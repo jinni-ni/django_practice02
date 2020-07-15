@@ -16,7 +16,6 @@ class Post(models.Model):
         db_table = 'blog_posts'
         ordering = ('-modify_dt',)
 
-
     def __str__(self):
         return self.title
     def get_absolute_url(self):
