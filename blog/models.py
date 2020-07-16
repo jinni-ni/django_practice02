@@ -10,6 +10,7 @@ class Post(models.Model):
     create_dt = models.DateField('CREATE DATE', auto_now_add=True)
     modify_dt = models.DateField('MODIFY DATE', auto_now=True)
 
+
     class Meta:
         verbose_name = 'post'
         verbose_name_plural = 'posts'
